@@ -25,7 +25,7 @@ export default function Home({ pdfUrl='https://arxiv.org/pdf/1706.03762.pdf' }) 
     return (
         <div>
             <Document
-                className="flex flex-col items-center h-full"
+                className="flex flex-col items-center h-screen overflow-y-scroll"
                 file={pdfUrl}
                 onLoadSuccess={onDocumentLoadSuccess}
             >
