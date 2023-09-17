@@ -12,7 +12,10 @@ export default function Home({ pdfUrl='https://arxiv.org/pdf/1706.03762.pdf' }) 
 
     function createPages(numPages) {
         return Array.from({ length: numPages }, (_, i) => (
-            <Page key={`page_${i + 1}`} pageNumber={i + 1} />
+            <Page
+                key={`page_${i + 1}`}
+                pageNumber={i + 1}
+            />
         ));
     }
 
@@ -25,6 +28,7 @@ export default function Home({ pdfUrl='https://arxiv.org/pdf/1706.03762.pdf' }) 
     return (
         <div>
             <Document
+                className="flex flex-col items-center h-full"
                 file={pdfUrl}
                 onLoadSuccess={onDocumentLoadSuccess}
             >
