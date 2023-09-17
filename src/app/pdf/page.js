@@ -32,7 +32,6 @@ export default function Home({ pdfUrl='https://arxiv.org/pdf/1706.03762.pdf' }) 
                 file={pdfUrl}
                 onLoadSuccess={onDocumentLoadSuccess}
             >
-                <Outline />
                 {pages}
             </Document>
         </div>
